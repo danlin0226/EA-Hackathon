@@ -22,7 +22,7 @@ const NoMaxWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 });
 
 export default function ToolTipOne() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleTooltipClose = () => {
     setOpen(false);
@@ -71,7 +71,7 @@ export default function ToolTipOne() {
                           </p>
                         </div>
                         <div className="prompt__nav-cont">
-                          <p className="prompt__page-number">1 of 6</p>
+                          <p className="prompt__page-number">2 of 6</p>
                           <p className="prompt__previous">PREVIOUS</p>
                           <p className="prompt__next">NEXT</p>
                         </div>
