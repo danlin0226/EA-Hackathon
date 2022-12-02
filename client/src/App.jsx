@@ -1,9 +1,13 @@
 import "./App.scss";
+import Home from "./components/home/Home";
+import ToolTipOne from "./components/tool-tip-one/ToolTipOne";
+import "./main.scss";
 
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <Home />
+      <ToolTipOne />
     </>
   );
 }
