@@ -19,12 +19,10 @@ function App() {
         <Routes>
           <Route path="/1" element={<WelcomeModal />} />
           <Route path="/2" element={<ToolTipOne />} />
-
           <Route path="/3" element={<ToolTipTwo />} />
           <Route path="/4" element={<ToolTipThree />} />
-
+          <Route path="/5" element={<ToolTipFour />} />
           <Route path="/6" element={<ToolTipSix />} />
-
         </Routes>
       </BrowserRouter>
     </>

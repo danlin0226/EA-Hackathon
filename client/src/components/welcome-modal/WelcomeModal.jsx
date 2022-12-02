@@ -5,7 +5,7 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
-import closeButton from "../../assets/exit.png";
+import closeButton from "../../assets/icons/exit.png";
 import { Link } from "react-router-dom";
 import "./WelcomeModal.scss";
 import WelcomePic from "../../assets/Welcome Modal Content (Cropped).png";
@@ -39,7 +39,6 @@ export default function WelcomeModal() {
           <ClickAwayListener onClickAway={handleTooltipClose}>
             <div>
               <NoMaxWidthTooltip
-                arrow
                 PopperProps={{
                   disablePortal: true,
                 }}
@@ -74,20 +73,28 @@ export default function WelcomeModal() {
                         </div>
                         <div className="prompt__nav-cont">
                           <p className="prompt__page-number">1 of 6</p>
-                          <Link to="/">
-                            <p className="prompt__previous">SKIP</p>
-                          </Link>
-
-                          <Link to="/2">
-                            <p className="prompt__next">NEXT</p>
-                          </Link>
+                          <p className="prompt__previous">
+                            <Link className="prompt__prev-link" to="/">
+                              SKIP
+                            </Link>
+                          </p>
+                          <p className="prompt__next">
+                            <Link className="prompt__prev-link" to="/2">
+                              NEXT
+                            </Link>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </>
                 }
               >
-                <Button onClick={handleTooltipOpen}>Click</Button>
+                <Button
+                  style={{ color: "transparent" }}
+                  onClick={handleTooltipOpen}
+                >
+                  Click
+                </Button>
               </NoMaxWidthTooltip>
             </div>
           </ClickAwayListener>

@@ -75,7 +75,7 @@ export default function ToolTipOne() {
                         <div className="prompt__nav-cont">
                           <p className="prompt__page-number">2 of 6</p>
                           <p className="prompt__previous">
-                            <Link className="prompt__prev-link" to="/">
+                            <Link className="prompt__prev-link" to="/1">
                               PREVIOUS
                             </Link>
                           </p>

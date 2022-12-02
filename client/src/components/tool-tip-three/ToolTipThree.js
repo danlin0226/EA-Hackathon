@@ -5,8 +5,8 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
-import closeButton from "../../assets/exit.png";
-import {Link } from "react-router-dom";
+import closeButton from "../../assets/icons/exit.png";
+import { Link } from "react-router-dom";
 import InviteFriend from "../../assets/Invite Friends (4 of 6).png";
 
 import "./ToolTipThree.scss";
@@ -34,7 +34,7 @@ export default function ToolTipThree() {
   };
 
   return (
-    <div className="tooltip">
+    <div className="tooltip-three">
       <Grid container justifyContent="center">
         <Grid item>
           <ClickAwayListener onClickAway={handleTooltipClose}>
@@ -49,7 +49,7 @@ export default function ToolTipThree() {
                 disableFocusListener
                 disableHoverListener
                 disableTouchListener
-                placement="right-start"
+                placement="left"
                 title={
                   <>
                     <div className="prompt">
@@ -75,17 +75,28 @@ export default function ToolTipThree() {
                         </div>
                         <div className="prompt__nav-cont">
                           <p className="prompt__page-number">4 of 6</p>
-                          <Link to="/2">
-                            <p className="prompt__previous">PREVIOUS </p>
-                          </Link>
-                          <p className="prompt__next">NEXT</p>
+                          <p className="prompt__previous">
+                            <Link className="prompt__prev-link" to="/3">
+                              PREVIOUS
+                            </Link>
+                          </p>
+                          <p className="prompt__next">
+                            <Link className="prompt__prev-link" to="/5">
+                              NEXT
+                            </Link>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </>
                 }
               >
-                <Button onClick={handleTooltipOpen}>Click</Button>
+                <Button
+                  style={{ color: "transparent" }}
+                  onClick={handleTooltipOpen}
+                >
+                  Click
+                </Button>
               </NoMaxWidthTooltip>
             </div>
           </ClickAwayListener>
