@@ -7,6 +7,7 @@ import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import closeButton from "../../assets/exit.png";
 import { Link } from "react-router-dom";
+import five from "../../assets/five.png";
 
 import "./ToolTipFour.scss";
 
@@ -53,6 +54,7 @@ export default function ToolTipOne() {
                   <>
                     <div className="prompt">
                       <div className="prompt__top">
+                        <img src={five} alt="" />
                         <img
                           className="prompt__close"
                           src={closeButton}
