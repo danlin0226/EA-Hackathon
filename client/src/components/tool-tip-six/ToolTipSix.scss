@@ -1,0 +1,14 @@
+.prompt {
+    
+    &__prev-link {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__done {
+        border: transparent;
+        color: white;
+        cursor: pointer;
+    }
+}

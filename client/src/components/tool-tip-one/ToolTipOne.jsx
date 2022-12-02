@@ -5,7 +5,7 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
-import closeButton from "../../assets/exit.png";
+import closeButton from "../../assets/icons/exit.png";
 import { Link } from "react-router-dom";
 
 import "./ToolTipOne.scss";
