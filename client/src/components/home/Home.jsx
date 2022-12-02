@@ -1,6 +1,6 @@
 import React from "react";
 
-import screenshot from "../../assets/EA.png";
+import screenshot from "../../assets/images/EA.png";
 import "./Home.scss";
 
 const Home = () => {

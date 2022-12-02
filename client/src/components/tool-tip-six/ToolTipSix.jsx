@@ -5,11 +5,12 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
+
 import closeButton from "../../assets/icons/exit.png";
 import { Link } from "react-router-dom";
-import two from "../../assets/two.png";
 
-import "./ToolTipOne.scss";
+import "./ToolTipSix.scss";
+import "../../main.scss";
 
 const NoMaxWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -22,7 +23,7 @@ const NoMaxWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
   },
 });
 
-export default function ToolTipOne() {
+export default function ToolTipSix() {
   const [open, setOpen] = React.useState(true);
 
   const handleTooltipClose = () => {
@@ -34,7 +35,7 @@ export default function ToolTipOne() {
   };
 
   return (
-    <div className="tooltip-one">
+    <section className="tooltip-six">
       <Grid container justifyContent="center">
         <Grid item>
           <ClickAwayListener onClickAway={handleTooltipClose}>
@@ -54,28 +55,38 @@ export default function ToolTipOne() {
                   <>
                     <div className="prompt">
                       <div className="prompt__top">
-                        <img src={two} alt="" />
                         <img
                           className="prompt__close"
                           src={closeButton}
                           onClick={handleTooltipClose}
-                          alt=""
+                          alt="Button to close the tool tip."
                         />
                       </div>
+
                       <div className="prompt__bottom">
-                        <div>
-                          <h1 className="prompt__header">
-                            All your content in one place
-                          </h1>
-                          <p className="prompt__text">
-                            Manage owned games and add-ons from your collection,
-                            then easily update or launch them with just 1 click.
-                          </p>
-                        </div>
+                        <h2 className="prompt__header">
+                          Join EA to get more game
+                        </h2>
+                        <p className="prompt__text">
+                          EA Play is the ultimate game membership. More rewards,
+                          more exclusive content, and unlimited access to more
+                          top titles for just $4.99 a month.
+                        </p>
                         <div className="prompt__nav-cont">
-                          <p className="prompt__page-number">2 of 6</p>
-                          <p className="prompt__previous">PREVIOUS</p>
-                          <p className="prompt__next">NEXT</p>
+                          <p className="prompt__page-number">6 of 6</p>
+
+                          <p className="prompt__previous" type="submit">
+                            <Link className="prompt__prev-link" to="/5">
+                              PREVIOUS
+                            </Link>
+                          </p>
+                          <button
+                            onClick={handleTooltipClose}
+                            className="prompt__done"
+                            type="submit"
+                          >
+                            DONE
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -88,6 +99,6 @@ export default function ToolTipOne() {
           </ClickAwayListener>
         </Grid>
       </Grid>
-    </div>
+    </section>
   );
 }
