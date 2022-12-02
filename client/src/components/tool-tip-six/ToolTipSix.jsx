@@ -5,9 +5,9 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
-
 import closeButton from "../../assets/icons/exit.png";
 import { Link } from "react-router-dom";
+import six from "../../assets/six.png";
 
 import "./ToolTipSix.scss";
 import "../../main.scss";
@@ -50,11 +50,12 @@ export default function ToolTipSix() {
                 disableFocusListener
                 disableHoverListener
                 disableTouchListener
-                placement="right-start"
+                placement="right"
                 title={
                   <>
                     <div className="prompt">
                       <div className="prompt__top">
+                        <img className="screenshot-card" src={six} alt="" />
                         <img
                           className="prompt__close"
                           src={closeButton}
@@ -93,7 +94,12 @@ export default function ToolTipSix() {
                   </>
                 }
               >
-                <Button onClick={handleTooltipOpen}>Click</Button>
+                <Button
+                  style={{ color: "transparent" }}
+                  onClick={handleTooltipOpen}
+                >
+                  Click
+                </Button>
               </NoMaxWidthTooltip>
             </div>
           </ClickAwayListener>

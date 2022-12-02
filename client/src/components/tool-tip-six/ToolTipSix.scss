@@ -1,18 +1,25 @@
-// .tooltip {
-
-// }
+.tooltip-six {
+  position: absolute;
+  top: 57%;
+  left: 22%;
+}
 
 .prompt {
-    
-    &__prev-link {
-        text-decoration: none;
-        color: white;
-        cursor: pointer;
-    }
+  &__prev-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
 
-    &__done {
-        border: transparent;
-        color: white;
-        cursor: pointer;
-    }
+  &__done {
+    border: transparent;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.screenshot-card {
+  margin-top: 12px;
+  width: 90%;
+  height: 90%;
 }

@@ -74,15 +74,28 @@ export default function ToolTipOne() {
                         </div>
                         <div className="prompt__nav-cont">
                           <p className="prompt__page-number">5 of 6</p>
-                          <p className="prompt__previous">PREVIOUS</p>
-                          <p className="prompt__next">NEXT</p>
+                          <p className="prompt__previous">
+                            <Link className="prompt__prev-link" to="/4">
+                              PREVIOUS
+                            </Link>
+                          </p>
+                          <p className="prompt__next">
+                            <Link className="prompt__prev-link" to="/6">
+                              NEXT
+                            </Link>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </>
                 }
               >
-                <Button onClick={handleTooltipOpen}>Click</Button>
+                <Button
+                  style={{ color: "transparent" }}
+                  onClick={handleTooltipOpen}
+                >
+                  Click
+                </Button>
               </NoMaxWidthTooltip>
             </div>
           </ClickAwayListener>
