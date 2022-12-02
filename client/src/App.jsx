@@ -14,11 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/2" element={<ToolTipOne />} />
-<<<<<<< HEAD
           <Route path="/6" element={<ToolTipSix />} />
-=======
           <Route path="/5" element={<ToolTipFour />} />
->>>>>>> dev
         </Routes>
       </BrowserRouter>
     </>
