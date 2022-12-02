@@ -7,9 +7,9 @@ import { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import closeButton from "../../assets/icons/exit.png";
 import { Link } from "react-router-dom";
-import two from "../../assets/two.png";
+import five from "../../assets/five.png";
 
-import "./ToolTipOne.scss";
+import "./ToolTipFour.scss";
 
 const NoMaxWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -34,7 +34,7 @@ export default function ToolTipOne() {
   };
 
   return (
-    <div className="tooltip-one">
+    <div className="tooltip-four">
       <Grid container justifyContent="center">
         <Grid item>
           <ClickAwayListener onClickAway={handleTooltipClose}>
@@ -49,12 +49,12 @@ export default function ToolTipOne() {
                 disableFocusListener
                 disableHoverListener
                 disableTouchListener
-                placement="right-start"
+                placement="right"
                 title={
                   <>
                     <div className="prompt">
                       <div className="prompt__top">
-                        <img src={two} alt="" />
+                        <img src={five} alt="" />
                         <img
                           className="prompt__close"
                           src={closeButton}
@@ -65,7 +65,7 @@ export default function ToolTipOne() {
                       <div className="prompt__bottom">
                         <div>
                           <h1 className="prompt__header">
-                            All your content in one place
+                            Get gaming in seconds, no matter where you are
                           </h1>
                           <p className="prompt__text">
                             Manage owned games and add-ons from your collection,
@@ -73,7 +73,7 @@ export default function ToolTipOne() {
                           </p>
                         </div>
                         <div className="prompt__nav-cont">
-                          <p className="prompt__page-number">2 of 6</p>
+                          <p className="prompt__page-number">5 of 6</p>
                           <p className="prompt__previous">PREVIOUS</p>
                           <p className="prompt__next">NEXT</p>
                         </div>
