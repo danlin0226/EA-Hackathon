@@ -1,33 +1,11 @@
-.home {
-  //position: absolute;
-  position: relative;
+.tooltip {
+  position: absolute;
+  top: 16%;
+  left: 4%;
+&__button{
+    background-color: red;
+    color:white;
 }
-
-.screenshot {
-  width: 100%;
-}
-
-.tooltips{
-    animation: fadein 5s;
-    position: absolute;
-    display: center;
-    left: 40%;
-    top: 27%;
-    transform: translate(-50%, -50%);
-}
-
-.tooltips button{
-  visibility: collapse;
-}
-  
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
 }
 
 .prompt {
